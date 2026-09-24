@@ -1,2 +1,2 @@
-Hello Sample By TS
+Hello Sample By AI
 Hello Sample By Playwright
