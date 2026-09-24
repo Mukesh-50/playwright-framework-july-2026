@@ -6,11 +6,7 @@ test.describe("",()=>{
         await page.goto('https://example.com/balal');
     });
 
-    test.beforeAll1(async ({ page }) => {
-        await page.goto('https://example.com/balal');
-    });
-
-
+  
     test('Balal page should load correctly', async ({ page }) => {   
         await expect(page).toHaveTitle(/Balal/);
     });
@@ -34,9 +30,9 @@ test.describe("",()=>{
         await expect(anotherElement).not.toBeNull();
     });
 
-    test.afterAll(async ({ page }) => {
-        // Add any cleanup steps here if necessary
+    test('Balal page should have another specific element 1234', async ({ page }) => {
+        const anotherElement = await page.$('selector-for-another-element');
+        await expect(anotherElement).not.toBeNull();
     });
-
 
 })
