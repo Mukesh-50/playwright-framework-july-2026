@@ -1,12 +1,17 @@
 import {test,expect} from '@playwright/test'
-//Ypur code is edited 
+
 test.describe("",()=>{
 
     test.beforeAll(async ({ page }) => {
         await page.goto('https://example.com/balal');
     });
 
+  
     test('Balal page should load correctly', async ({ page }) => {   
+        await expect(page).toHaveTitle(/Balal/);
+    });
+
+     test('Balal page should load correctly 111', async ({ page }) => {   
         await expect(page).toHaveTitle(/Balal/);
     });
 
@@ -15,14 +20,15 @@ test.describe("",()=>{
         await expect(element).not.toBeNull();
     });
 
-    test('Balal page should have another specific element', async ({ page }) => {
+       test('Balal page should have another specific element222', async ({ page }) => {
         const anotherElement = await page.$('selector-for-another-element');
         await expect(anotherElement).not.toBeNull();
     });
 
-    //test.afterAll(async ({ page }) => {
-        // Add any cleanup steps here if necessary
-    //});
+    test('Balal page should have another specific element', async ({ page }) => {
+        const anotherElement = await page.$('selector-for-another-element');
+        await expect(anotherElement).not.toBeNull();
+    });
 
     test('Balal page should have another specific element 1234', async ({ page }) => {
         const anotherElement = await page.$('selector-for-another-element');
