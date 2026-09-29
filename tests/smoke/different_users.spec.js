@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
-import { LoginPage } from "../../pages/LoginPage.js";
-import multiuser from "../../testdata/allUsers.json";
+import { LoginPage } from "../../pages/LoginPage.js" assert { type: "json" };;
+import multiuser from "../../testdata/allUsers.json" assert { type: "json" };;
 
 
 
