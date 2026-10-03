@@ -11,8 +11,7 @@ test.describe("Login Test",{tags: ['smoke','login']},()=>{
 
     test('login to application', async ({ page,loginPage,dashboardPage}) =>
 {
-    console.log(`Login to Application.`);
-    
+
     await page.goto('/login');
     
     await loginPage.loginToApplication(user.username, user.password);
