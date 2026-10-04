@@ -1,7 +1,7 @@
 import { test as setup } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage.js';
 import { DashboardPage } from '../pages/DashboardPage.js';
-import user from '../testdata/user.json';
+import user from '../testdata/user.json' assert { type: "json" };
 const authFile = 'playwright/.auth/user.json';
 
 setup('authenticate', async ({ page }) => {

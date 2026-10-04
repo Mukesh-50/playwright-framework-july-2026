@@ -1,6 +1,6 @@
 import {test,expect} from "../../fixture/fixture.js"
 
-import user from '../../testdata/user.json'
+import user from '../../testdata/user.json' assert { type: "json" };
 
 
 test.describe("Login Test",{tags: ['smoke','login']},()=>{
