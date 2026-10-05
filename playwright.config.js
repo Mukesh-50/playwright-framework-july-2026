@@ -17,7 +17,8 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
      baseURL: 'https://freelance-learn-automation.vercel.app',
-
+     storageState: "playwright/.auth/user.json",
+     dependencies: ["setup"],
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "retain-on-failure",
     screenshot: "only-on-failure",
