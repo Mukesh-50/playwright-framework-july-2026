@@ -3,6 +3,7 @@ import { test as base } from '@playwright/test';
 import {LoginPage} from '../pages/LoginPage.js';
 
 import {DashboardPage} from '../pages/DashboardPage.js';
+import { HomePage } from '../pages/homePage.js';
 
 
 export const test=base.extend({
@@ -31,8 +32,20 @@ export const test=base.extend({
             await use(dashboardPage);
 
             console.log('Exiting Dashboard fixture');
-
+     
        }
+       ,
+       homePage:async({page},use)=>
+       {
+           console.log('Inside Homepage fixture');
+
+            const homePage = new HomePage(page);
+
+            await use(homePage);
+
+            console.log('Exiting Homepage fixture');
+       }   
+       
         
 
 });
