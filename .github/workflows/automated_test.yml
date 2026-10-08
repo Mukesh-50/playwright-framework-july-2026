@@ -4,17 +4,20 @@ on: push
 
 jobs:
   SampleLinux:
+    timeout-minutes: 5
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello From Github Actions In Linux"
 
   SampleMAC:
+    timeout-minutes: 5
     needs: SampleLinux
     runs-on: macos-latest
     steps:
       - run: echo "Hello From Github Actions In MAC"
 
   SampleWindows:
+    timeout-minutes: 5
     needs:
       - SampleLinux
       - SampleMAC
