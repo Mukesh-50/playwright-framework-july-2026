@@ -24,3 +24,12 @@ jobs:
     runs-on: windows-latest
     steps:
       - run: echo "Hello From Github Actions In Windows Machine"
+
+      SampleWindows:
+    timeout-minutes: 5
+    needs:
+      - SampleLinux
+      - SampleMAC
+    runs-on: windows-latest
+    steps:
+      - run: echo "Hello From FZ Learnings Github Actions In Windows Machine"
