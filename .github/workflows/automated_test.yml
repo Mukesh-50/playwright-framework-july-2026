@@ -9,11 +9,15 @@ jobs:
       - run: echo "Hello From Github Actions In Linux"
 
   SampleMAC:
+    needs: SampleLinux
     runs-on: macos-latest
     steps:
       - run: echo "Hello From Github Actions In MAC"
 
   SampleWindows:
+    needs:
+      - SampleLinux
+      - SampleMAC
     runs-on: windows-latest
     steps:
       - run: echo "Hello From Github Actions In Windows Machine"
